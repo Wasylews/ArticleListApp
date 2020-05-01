@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/articleListFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/articleListFragment"
+        android:name="com.genius.wasylews.articleslistapp.view.main.ArticleListFragment" />
+
+    <fragment
+        android:id="@+id/articleDetailsFragment"
+        android:name="com.genius.wasylews.articleslistapp.view.details.ArticleDetailsFragment" />
+</navigation>

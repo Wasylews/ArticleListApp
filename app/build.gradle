@@ -69,10 +69,10 @@ dependencies {
     kapt 'com.google.dagger:dagger-compiler:2.27'
 
     // Moxy
-    implementation 'com.arello-mobile:moxy:1.5.6'
-    implementation 'com.arello-mobile:moxy-android:1.5.6'
-    implementation 'com.arello-mobile:moxy-app-compat:1.5.6'
-    kapt 'com.arello-mobile:moxy-compiler:1.5.6'
+    implementation 'com.github.moxy-community:moxy:2.1.2'
+    implementation 'com.github.moxy-community:moxy-androidx:2.1.2'
+    implementation 'com.github.moxy-community:moxy-ktx:2.1.2'
+    kapt 'com.github.moxy-community:moxy-compiler:2.1.2'
 
     // Gson
     implementation 'com.google.code.gson:gson:2.8.6'

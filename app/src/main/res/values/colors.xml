@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorPrimary">#ad1a17</color>
+    <color name="colorPrimaryDark">#782e2e</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorTvSelected">#afc8f0</color>
+    <color name="colorTabDefault">#c8c8c8</color>
+    <color name="colorTalkSelected">#a1dca4</color>
+    <color name="colorSpiritSelected">#fcb75e</color>
 </resources>
