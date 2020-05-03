@@ -8,7 +8,8 @@ data class ArticleModel(
     val title: String,
     @SerializedName("category") val category: ArticleCategory,
     val picture: String,
-    @SerializedName("date_created") val date: Date
+    @SerializedName("date_created") val date: Date,
+    val content: String
 )
 
 data class ArticleCategory(val id: Int)

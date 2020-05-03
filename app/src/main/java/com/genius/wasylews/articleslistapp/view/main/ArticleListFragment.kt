@@ -2,8 +2,10 @@ package com.genius.wasylews.articleslistapp.view.main
 
 import android.os.Bundle
 import android.view.View
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.genius.wasylews.articleslistapp.R
+import com.genius.wasylews.articleslistapp.domain.model.Article
 import com.genius.wasylews.articleslistapp.view.base.BaseFragment
 import com.genius.wasylews.articleslistapp.view.main.custom.CategoryView
 import com.genius.wasylews.articleslistapp.view.main.custom.LoadMoreView
@@ -30,8 +32,17 @@ class ArticleListFragment: BaseFragment(R.layout.fragment_article_list), Article
         adapter.loadMoreModule.loadMoreView = LoadMoreView()
         adapter.setHeaderView(getHeaderView())
         adapter.headerWithEmptyEnable = true
+        adapter.setOnItemClickListener { _, _, position ->
+            openArticleDetails(adapter.getItem(position).article)
+        }
+
         recycler_articles.adapter = adapter
         recycler_articles.layoutManager = LinearLayoutManager(context)
+    }
+
+    private fun openArticleDetails(article: Article) {
+        val direction = ArticleListFragmentDirections.showArticleDetails(article)
+        findNavController().navigate(direction)
     }
 
     private fun getHeaderView(): View {

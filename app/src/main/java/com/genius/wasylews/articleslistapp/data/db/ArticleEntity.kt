@@ -13,5 +13,6 @@ data class ArticleEntity(
     @ColumnInfo val title: String,
     @ColumnInfo(name = "category_id") val categoryId: Int,
     @ColumnInfo val picture: String,
-    @ColumnInfo val date: Date
+    @ColumnInfo val date: Date,
+    @ColumnInfo val content: String
 )

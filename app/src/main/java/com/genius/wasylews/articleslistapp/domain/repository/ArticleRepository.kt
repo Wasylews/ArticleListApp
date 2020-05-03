@@ -19,7 +19,7 @@ class ArticleRepository @Inject constructor(
             .andThen(articleDao.getArticles(categoryId, page, pageSize))
             .toObservable()
             .flatMapIterable { it }
-            .map { Article(it.title, it.picture, it.date) }
+            .map { Article(it.title, it.picture, it.date, it.content) }
             .toList()
     }
 
@@ -28,7 +28,15 @@ class ArticleRepository @Inject constructor(
             .toObservable()
             .map { it.articles }
             .flatMapIterable { it }
-            .map { ArticleEntity(title = it.title, categoryId = it.category.id, picture = it.picture, date = it.date) }
+            .map {
+                ArticleEntity(
+                    title = it.title,
+                    categoryId = it.category.id,
+                    picture = it.picture,
+                    date = it.date,
+                    content = it.content
+                )
+            }
             .toList()
             .flatMapCompletable {
                 articleDao.addArticles(it)

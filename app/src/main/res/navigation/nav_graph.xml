@@ -8,9 +8,17 @@
 
     <fragment
         android:id="@+id/articleListFragment"
-        android:name="com.genius.wasylews.articleslistapp.view.main.ArticleListFragment" />
+        android:name="com.genius.wasylews.articleslistapp.view.main.ArticleListFragment" >
+        <action
+            android:id="@+id/showArticleDetails"
+            app:destination="@id/articleDetailsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/articleDetailsFragment"
-        android:name="com.genius.wasylews.articleslistapp.view.details.ArticleDetailsFragment" />
+        android:name="com.genius.wasylews.articleslistapp.view.details.ArticleDetailsFragment">
+        <argument
+            android:name="article"
+            app:argType="com.genius.wasylews.articleslistapp.domain.model.Article" />
+    </fragment>
 </navigation>
