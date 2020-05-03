@@ -22,11 +22,20 @@ class ArticleListFragment: BaseFragment(R.layout.fragment_article_list), Article
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        adapter.loadMoreModule.setOnLoadMoreListener {
+            presenter.loadData()
+        }
+        adapter.setHeaderView(CategoryView(requireContext()))
         recycler_articles.adapter = adapter
         recycler_articles.layoutManager = LinearLayoutManager(context)
     }
 
-    override fun showItems(items: List<ArticleListItem>) {
-        adapter.setList(items)
+    override fun showItems(items: List<ArticleItem>) {
+        if (items.isEmpty()) {
+            adapter.loadMoreModule.loadMoreEnd(true)
+        } else {
+            adapter.loadMoreModule.loadMoreComplete()
+        }
+        adapter.addData(items)
     }
 }

@@ -7,10 +7,11 @@
 
     <!-- padding -->
     <dimen name="padding_horizontal">24dp</dimen>
-    <dimen name="padding_top">16dp</dimen>
+    <dimen name="padding_top">19dp</dimen>
 
     <!-- margin -->
     <dimen name="margin_title_top">14dp</dimen>
+    <dimen name="margin_title_end">130dp</dimen>
 
     <dimen name="height_img_preview">177dp</dimen>
 </resources>

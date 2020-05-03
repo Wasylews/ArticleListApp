@@ -2,7 +2,6 @@ package com.genius.wasylews.articleslistapp.data.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.genius.wasylews.articleslistapp.data.model.ArticleEntity
 
 @Database(entities = [ArticleEntity::class], version = AppDatabase.VERSION, exportSchema = false)
 abstract class AppDatabase: RoomDatabase() {
