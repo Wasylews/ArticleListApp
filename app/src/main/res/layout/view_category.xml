@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<RadioGroup android:layout_width="match_parent"
+    android:id="@+id/group_tabs"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:paddingHorizontal="@dimen/padding_horizontal"
-    android:paddingTop="@dimen/padding_top">
+    android:paddingTop="@dimen/padding_top"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:checkedButton="@id/btn_tv">
 
-    <androidx.appcompat.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatRadioButton
         android:id="@+id/btn_tv"
         style="@style/TabButton.TV"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="@string/schrang_tv"
-        android:layout_weight="1"/>
+        android:layout_marginEnd="6dp"
+        android:layout_weight="1" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatRadioButton
         android:id="@+id/btn_talk"
         style="@style/TabButton.Talk"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/talk"/>
+        android:text="@string/talk"
+        android:layout_marginEnd="6dp"
+        android:layout_weight="1" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatRadioButton
         android:id="@+id/btn_spirit"
         style="@style/TabButton.Spirit"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
         android:layout_weight="1"
         android:text="@string/spirit"/>
 
-</LinearLayout>
+</RadioGroup>
