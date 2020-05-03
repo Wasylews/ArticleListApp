@@ -30,6 +30,7 @@ class ArticleRepository @Inject constructor(
             .flatMapIterable { it }
             .map {
                 ArticleEntity(
+                    article_id = it.id,
                     title = it.title,
                     categoryId = it.category.id,
                     picture = it.picture,
