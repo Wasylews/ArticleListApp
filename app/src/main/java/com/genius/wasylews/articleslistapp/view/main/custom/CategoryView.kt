@@ -1,4 +1,4 @@
-package com.genius.wasylews.articleslistapp.view.main
+package com.genius.wasylews.articleslistapp.view.main.custom
 
 import android.content.Context
 import android.util.AttributeSet

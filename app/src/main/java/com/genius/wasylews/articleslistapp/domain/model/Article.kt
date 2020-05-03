@@ -5,5 +5,5 @@ import java.util.*
 data class Article(
     val title: String,
     val picture: String,
-    val date: Date?
+    val date: Date
 )

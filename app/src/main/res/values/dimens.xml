@@ -16,5 +16,6 @@
     <!-- height -->
     <dimen name="height_img_preview">177dp</dimen>
     <dimen name="tab_height">32dp</dimen>
+    <dimen name="date_text_size">13sp</dimen>
 
 </resources>

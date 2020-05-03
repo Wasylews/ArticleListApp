@@ -5,6 +5,8 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.genius.wasylews.articleslistapp.R
 import com.genius.wasylews.articleslistapp.view.base.BaseFragment
+import com.genius.wasylews.articleslistapp.view.main.custom.CategoryView
+import com.genius.wasylews.articleslistapp.view.main.custom.LoadMoreView
 import kotlinx.android.synthetic.main.fragment_article_list.*
 import moxy.ktx.moxyPresenter
 import javax.inject.Inject

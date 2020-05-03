@@ -6,6 +6,8 @@ import com.chad.library.adapter.base.module.LoadMoreModule
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.genius.wasylews.articleslistapp.R
 import com.genius.wasylews.articleslistapp.domain.model.Article
+import java.text.SimpleDateFormat
+import java.util.*
 
 data class ArticleItem(val article: Article)
 
@@ -19,5 +21,9 @@ class ArticleAdapter: BaseQuickAdapter<ArticleItem, BaseViewHolder> (
             .into(holder.getView(R.id.img_preview))
 
         holder.setText(R.id.text_title, item.article.title)
+        holder.setText(
+            R.id.text_date,
+            SimpleDateFormat("dd.MM.yy", Locale.getDefault()).format(item.article.date)
+        )
     }
 }

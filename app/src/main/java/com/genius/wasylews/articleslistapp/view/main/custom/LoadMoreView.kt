@@ -1,4 +1,4 @@
-package com.genius.wasylews.articleslistapp.view.main
+package com.genius.wasylews.articleslistapp.view.main.custom
 
 import android.view.View
 import android.view.ViewGroup
