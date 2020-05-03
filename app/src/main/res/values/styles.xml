@@ -10,20 +10,22 @@
 
     <style name="TabButton" parent="Widget.AppCompat.Button">
         <item name="textAllCaps">false</item>
+        <item name="android:layout_height">@dimen/tab_height</item>
         <item name="android:textSize">@dimen/tab_text_size</item>
         <item name="android:textColor">@android:color/white</item>
+        <item name="buttonCompat">@android:color/transparent</item>
     </style>
 
     <style name="TabButton.TV">
-        <item name="background">@drawable/btn_tv</item>
+        <item name="android:background">@drawable/btn_tv</item>
     </style>
 
     <style name="TabButton.Talk">
-        <item name="background">@drawable/btn_talk</item>
+        <item name="android:background">@drawable/btn_talk</item>
     </style>
 
     <style name="TabButton.Spirit">
-        <item name="background">@drawable/btn_spirit</item>
+        <item name="android:background">@drawable/btn_spirit</item>
     </style>
 
     <style name="ArticleTitleTextAppearance" parent="TextAppearance.AppCompat.Body1">

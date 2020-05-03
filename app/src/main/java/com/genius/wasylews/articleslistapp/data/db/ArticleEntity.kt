@@ -1,12 +1,12 @@
 package com.genius.wasylews.articleslistapp.data.db
 
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.PrimaryKey
-import androidx.room.TypeConverters
+import androidx.room.*
 import java.util.*
 
-@Entity(tableName = "articles")
+@Entity(
+    tableName = "articles",
+    indices = [Index(value = ["title"], unique = true)]
+)
 @TypeConverters(value = [DateConverter::class])
 data class ArticleEntity(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,

@@ -13,5 +13,8 @@
     <dimen name="margin_title_top">14dp</dimen>
     <dimen name="margin_title_end">130dp</dimen>
 
+    <!-- height -->
     <dimen name="height_img_preview">177dp</dimen>
+    <dimen name="tab_height">32dp</dimen>
+
 </resources>

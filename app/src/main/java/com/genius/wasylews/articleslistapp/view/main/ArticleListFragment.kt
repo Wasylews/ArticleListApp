@@ -25,9 +25,31 @@ class ArticleListFragment: BaseFragment(R.layout.fragment_article_list), Article
         adapter.loadMoreModule.setOnLoadMoreListener {
             presenter.loadData()
         }
-        adapter.setHeaderView(CategoryView(requireContext()))
+        adapter.loadMoreModule.loadMoreView = LoadMoreView()
+        adapter.setHeaderView(getHeaderView())
+        adapter.headerWithEmptyEnable = true
         recycler_articles.adapter = adapter
         recycler_articles.layoutManager = LinearLayoutManager(context)
+    }
+
+    private fun getHeaderView(): View {
+        val view = CategoryView(requireContext())
+        view.setOnCategoryChangedListener {
+            adapter.setNewInstance(null)
+            presenter.changeCategory(it)
+        }
+
+        return view
+    }
+
+    override fun showLoading() {
+        adapter.setNewInstance(null)
+        adapter.setEmptyView(R.layout.layout_loading)
+    }
+
+    override fun showNoData() {
+        adapter.setNewInstance(null)
+        adapter.setEmptyView(R.layout.layout_no_data)
     }
 
     override fun showItems(items: List<ArticleItem>) {

@@ -22,6 +22,9 @@ class ArticleListPresenter @Inject constructor(
     }
 
     fun loadData() {
+        if (currentPage == 0) {
+            viewState.showLoading()
+        }
         getArticlesUseCase.getArticles(currentCategory, currentPage)
             .toObservable()
             .flatMapIterable { it }
@@ -32,10 +35,20 @@ class ArticleListPresenter @Inject constructor(
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
-                viewState.showItems(it)
-                currentPage++
+                if (currentPage == 0 && it.isEmpty()) {
+                    viewState.showNoData()
+                } else {
+                    viewState.showItems(it)
+                    currentPage++
+                }
             }, {
                 it.printStackTrace()
             }).addTo(compositeDisposable)
+    }
+
+    fun changeCategory(category: GetArticlesUseCase.Category) {
+        currentPage = 0
+        currentCategory = category
+        loadData()
     }
 }

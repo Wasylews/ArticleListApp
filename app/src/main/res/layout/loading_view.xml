@@ -1,0 +1,56 @@
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="56dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout android:id="@+id/loadmore_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            style="@style/SpinKitView.MultiplePulse"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/colorPrimary" />
+
+    </FrameLayout>
+
+    <FrameLayout android:id="@+id/loadmore_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:text="@string/error_load_more"/>
+
+    </FrameLayout>
+
+    <FrameLayout android:id="@+id/loadmore_end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="visible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:text="@string/load_more_complete"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/loadmore_complete"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="gone" />
+
+</FrameLayout>
