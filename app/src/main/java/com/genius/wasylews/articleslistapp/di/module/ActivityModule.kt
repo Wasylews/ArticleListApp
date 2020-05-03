@@ -1,5 +1,6 @@
 package com.genius.wasylews.articleslistapp.di.module
 
+import com.genius.wasylews.articleslistapp.di.scope.PerActivity
 import com.genius.wasylews.articleslistapp.view.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -8,5 +9,6 @@ import dagger.android.ContributesAndroidInjector
 interface ActivityModule {
 
     @ContributesAndroidInjector
+    @PerActivity
     fun provideMainActivity(): MainActivity
 }

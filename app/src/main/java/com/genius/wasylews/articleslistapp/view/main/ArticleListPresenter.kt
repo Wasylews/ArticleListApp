@@ -1,5 +1,6 @@
 package com.genius.wasylews.articleslistapp.view.main
 
+import com.genius.wasylews.articleslistapp.di.scope.PerFragment
 import com.genius.wasylews.articleslistapp.domain.usecase.GetArticlesUseCase
 import com.genius.wasylews.articleslistapp.view.base.BasePresenter
 import com.genius.wasylews.articleslistapp.view.base.addTo
@@ -9,6 +10,7 @@ import moxy.InjectViewState
 import javax.inject.Inject
 
 @InjectViewState
+@PerFragment
 class ArticleListPresenter @Inject constructor(
     private val getArticlesUseCase: GetArticlesUseCase
 ): BasePresenter<ArticleListView>() {
