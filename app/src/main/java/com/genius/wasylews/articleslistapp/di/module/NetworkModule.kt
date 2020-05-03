@@ -32,7 +32,7 @@ class NetworkModule {
                 json: JsonElement?,
                 typeOfT: Type?,
                 context: JsonDeserializationContext?
-            ): Date = Date(json?.asLong ?: 0)
+            ): Date = Date(json?.asLong?.times(1000L) ?: 0)
         })
         .create()
 
